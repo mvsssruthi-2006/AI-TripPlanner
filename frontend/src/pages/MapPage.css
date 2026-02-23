@@ -1,0 +1,128 @@
+/* ---------- GLOBAL PAGE ---------- */
+.map-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #0f172a
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- TITLE ---------- */
+.map-page h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #a78bfa,
+    #f472b6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- MAP CONTAINER ---------- */
+.leaflet-container {
+  height: 600px;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- BUTTON WRAPPER ---------- */
+.map-page > div:last-child {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- BUTTON STYLE ---------- */
+.map-page button {
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+  color: white;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.map-page button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.6);
+}
+
+.map-page button:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* ---------- POPUP STYLE ---------- */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  padding: 8px;
+  background: linear-gradient(
+    135deg,
+    #1e293b,
+    #334155
+  );
+  color: white;
+}
+
+.leaflet-popup-tip {
+  background: #1e293b;
+}
+
+/* ---------- LOADING STATE ---------- */
+.map-page div[style*="Mapping destinations"] {
+  font-size: 18px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .leaflet-container {
+    height: 450px;
+  }
+
+  .map-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .map-page button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,288 @@
+/* Register.css */
+
+.register-page {
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Overlay to make text pop more */
+.register-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.register-card {
+  width: 450px; /* Reduced from 500px */
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 32px; /* Reduced from 40px */
+  padding: 40px 45px; /* Reduced from 60px 60px */
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+}
+
+.register-card h2 {
+  text-align: center;
+  margin-bottom: 8px; /* Reduced from 16px */
+  font-size: 2.8rem; /* Reduced from 3.2rem but still large */
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  text-align: center;
+  color: #f97316;
+  margin-bottom: 25px; /* Reduced from 40px */
+  font-size: 1.2rem; /* Reduced from 1.3rem */
+  font-weight: 500;
+}
+
+.register-card label {
+  display: block;
+  font-size: 1.1rem; /* Slightly reduced from 1.2rem */
+  margin-top: 16px; /* Reduced from 24px */
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px; /* Reduced from 8px */
+}
+
+.register-card input {
+  width: 100%;
+  padding: 14px 18px; /* Reduced from 18px 22px */
+  margin-top: 2px; /* Reduced from 4px */
+  border-radius: 16px; /* Reduced from 20px */
+  border: 2px solid #e5e7eb;
+  font-size: 1.1rem; /* Slightly reduced from 1.2rem */
+  transition: all 0.2s ease;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+.register-card input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2); /* Slightly smaller ring */
+  background: white;
+}
+
+.register-card input::placeholder {
+  color: #9ca3af;
+  font-size: 1rem; /* Reduced from 1.1rem */
+}
+
+.register-card input.error {
+  border-color: #ef4444;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 0.95rem; /* Reduced from 1rem */
+  margin-top: 4px; /* Reduced from 6px */
+  padding-left: 4px;
+  font-weight: 500;
+}
+
+.password-rules {
+  margin: 10px 0; /* Reduced from 12px */
+  padding: 12px; /* Reduced from 16px */
+  background: #f9fafb;
+  border-radius: 14px; /* Reduced from 16px */
+  border: 1px solid #e5e7eb;
+}
+
+.rule {
+  font-size: 0.95rem; /* Reduced from 1rem */
+  color: #6b7280;
+  margin: 6px 0; /* Reduced from 8px */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced from 8px */
+}
+
+.rule::before {
+  content: '○';
+  color: #9ca3af;
+  font-size: 1.1rem; /* Reduced from 1.2rem */
+}
+
+.rule.ok {
+  color: #10b981;
+}
+
+.rule.ok::before {
+  content: '✓';
+  color: #10b981;
+  font-weight: bold;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 16px 24px; /* Reduced from 22px 28px */
+  margin-top: 25px; /* Reduced from 40px */
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 50px; /* Slightly reduced from 60px */
+  font-size: 1.3rem; /* Reduced from 1.5rem */
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 12px 25px rgba(249, 115, 22, 0.35); /* Slightly smaller shadow */
+}
+
+.register-btn:hover:not(:disabled) {
+  background: #ea580c;
+  transform: translateY(-3px); /* Reduced from -4px */
+  box-shadow: 0 20px 35px rgba(249, 115, 22, 0.45);
+}
+
+.register-btn:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.register-btn:disabled {
+  background: #fdb68b;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.signin-text {
+  text-align: center;
+  margin-top: 25px; /* Reduced from 36px */
+  font-size: 1.1rem; /* Reduced from 1.2rem */
+  color: #4b5563;
+}
+
+.signin-text span {
+  color: #f97316;
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 6px; /* Reduced from 8px */
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.signin-text span:hover {
+  color: #ea580c;
+  border-bottom-color: #f97316;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-card {
+    width: 50%;
+    max-width: 420px;
+    padding: 3px 3px;
+  }
+  
+  .register-card h2 {
+    font-size: 2.4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .register-card label {
+    font-size: 1rem;
+    margin-top: 14px;
+  }
+  
+  .register-card input {
+    padding: 13px 16px;
+    font-size: 1rem;
+  }
+  
+  .register-btn {
+    padding: 15px 22px;
+    font-size: 1.2rem;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    max-width: 380px;
+    padding: 30px 25px;
+  }
+  
+  .register-card h2 {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  
+  .register-card label {
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+  
+  .register-card input {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+  
+  .rule {
+    font-size: 0.9rem;
+  }
+  
+  .password-rules {
+    padding: 10px;
+  }
+  
+  .register-btn {
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  .signin-text {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-card {
+    padding: 25px 20px;
+  }
+  
+  .register-card h2 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .register-btn {
+    padding: 13px 18px;
+    font-size: 1rem;
+  }
+  
+  .password-rules {
+    padding: 8px;
+  }
+  
+  .rule {
+    font-size: 0.85rem;
+    margin: 4px 0;
+  }
+}

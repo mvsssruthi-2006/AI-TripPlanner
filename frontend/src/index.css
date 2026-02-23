@@ -1,0 +1,340 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #f0f4ff, #ffffff);
+  color: #1f2937;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar h3 {
+  color: #2563eb;
+}
+
+.navbar a,
+.navbar button {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+  color: #2563eb;
+}
+/* ---------- NAVBAR FIX ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+}
+
+.nav-right a,
+.nav-right button {
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ---------- CONTAINER ---------- */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ---------- FORM CARD ---------- */
+.trip-form,
+.form-box {
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.trip-form h2,
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e40af;
+}
+
+/* ---------- GRID ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+/* ---------- INPUTS ---------- */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* ---------- HERO (HOME PAGE) ---------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #475569;
+}
+
+/* ---------- RESULT CARDS ---------- */
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+}
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #c7d2fe;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.day-card {
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.budget {
+  font-size: 20px;
+  font-weight: bold;
+  color: #16a34a;
+}
+.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.dark .navbar,
+.dark .trip-form,
+.dark .form-box,
+.dark .card {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background: #0f172a;
+  color: white;
+  border-color: #334155;
+}
+/* ---------- MAKE MY TRIP STYLE SEARCH ---------- */
+.hero-search {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 22px 24px;
+  margin: 40px auto;
+  max-width: 1000px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.hero-search input {
+  flex: 1;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.hero-search input:hover {
+  border-color: #2563eb;
+}
+
+.hero-search button {
+  width: auto;
+  padding: 16px 30px;
+  border-radius: 14px;
+  font-size: 16px;
+}
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.section h3 {
+  margin-bottom: 18px;
+  color: #1e3a8a;
+}
+
+/* Cards row */
+.card-row {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* Selectable cards */
+.select-card,
+.option-card {
+  flex: 1;
+  min-width: 180px;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.select-card:hover,
+.option-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Active card */
+.option-card.active {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  background: #eef2ff;
+}
+/* ---------- BUDGET SLIDER ---------- */
+input[type="range"] {
+  width: 100%;
+  margin-top: 15px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+}
+.dark .hero-search,
+.dark .select-card,
+.dark .option-card {
+  background: #1e293b;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.dark .option-card.active {
+  background: #1e40af;
+  color: white;
+}
+.select-card p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

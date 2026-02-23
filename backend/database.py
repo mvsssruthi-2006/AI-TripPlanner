@@ -1,0 +1,13 @@
+import os
+from pymongo import MongoClient
+from dotenv import load_dotenv
+
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
+
+client = MongoClient(MONGO_URI)
+db = client["trip_navigator_db"]
+
+users_collection = db["users"]
+trips_collection = db["trips"]

@@ -1,0 +1,205 @@
+/* Dashboard.css */
+
+.dashboard-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Dark overlay for better text readability */
+.dashboard-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 2rem; /* Increased */
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+}
+
+.dashboard-content h1 {
+  font-size: 4.5rem; /* Increased from 3.5rem */
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-content h1 span {
+  color: #f97316;
+  display: block;
+  font-size: 5rem; /* Even larger for emphasis */
+}
+
+.subtitle {
+  font-size: 1.4rem; /* Increased from 1.2rem */
+  line-height: 1.8;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards container */
+.dashboard-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+/* Individual card - WITHOUT ICONS */
+.dash-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 32px;
+  padding: 50px 40px;
+  width: 320px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dash-card:hover {
+  transform: translateY(-12px);
+  background: rgba(249, 115, 22, 0.2);
+  border-color: #f97316;
+  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.4);
+}
+
+.dash-card h3 {
+  font-size: 2.2rem; /* Increased */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.dash-card p {
+  font-size: 1.5rem; /* Increased */
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Stats section - REMOVED COMPLETELY */
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .dashboard-content h1 {
+    font-size: 3.8rem;
+  }
+  
+  .dashboard-content h1 span {
+    font-size: 4.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .dash-card {
+    padding: 40px 30px;
+    width: 280px;
+  }
+  
+  .dash-card h3 {
+    font-size: 2rem;
+  }
+  
+  .dash-card p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 20px 15px;
+  }
+  
+  .welcome-text {
+    font-size: 1.6rem;
+  }
+  
+  .dashboard-content h1 {
+    font-size: 3rem;
+  }
+  
+  .dashboard-content h1 span {
+    font-size: 3.4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .dashboard-cards {
+    gap: 25px;
+  }
+  
+  .dash-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 35px 25px;
+  }
+  
+  .dash-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .dash-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.4rem;
+  }
+  
+  .dashboard-content h1 {
+    font-size: 2.4rem;
+  }
+  
+  .dashboard-content h1 span {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .dash-card {
+    padding: 30px 20px;
+  }
+  
+  .dash-card h3 {
+    font-size: 1.6rem;
+  }
+}
