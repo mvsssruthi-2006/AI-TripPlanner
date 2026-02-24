@@ -95,7 +95,7 @@ function PlanTrip() {
      const token = localStorage.getItem("token");
 
 const res = await axios.post(
-  "http://localhost:8000/api/plan-trip",
+  "https://ai-tripplanner-9iq7.onrender.com/api/plan-trip",
   payload,
   {
     headers: {
