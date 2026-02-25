@@ -10,10 +10,7 @@ app = FastAPI(title="AI Trip Planner API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://tripnavigator.vercel.app/"
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
